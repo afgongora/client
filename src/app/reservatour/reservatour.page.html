@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reservatour</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-content fullscreen>
+  <ion-fab horizontal="end" vertical="center" slot="fixed" (click)="onPost">
+    <ion-fab-button color="danger">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+ <app-post-list></app-post-list>
+
+</ion-content>
+  <a [routerLink]="['/']" routerLinkActive="router-link-active" >Home</a>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-item>
+  <a  [routerLink]="['/reserva', post.id]" class="user">
+    <img [src]="'https://i.pravatar.cc/?img=1'" />
+    <h2>{{ post.username }}</h2>
+    <h3>{{post.name}}</h3>
+
+  </a>
+  <ion-button color="danger" (click)="onBorrar()"><ion-icon name="trash-outline"></ion-icon>Borrar</ion-button>
+<!--
+  <ion-item>
+  <ion-card>
+    <img [src]="post.picture" />
+    <ion-card-header>
+    <div class="user">
+      <img [src]="'https://i.pravatar.cc/?img='+post" />
+      <h2>{{ post.username }}</h2>
+      <h3>{{post.name}}</h3>
+    </div>
+    </ion-card-header>
+    <ion-card-content>
+      {{post.description}}
+    </ion-card-content>
+  </ion-card>
+-->
+</ion-item>

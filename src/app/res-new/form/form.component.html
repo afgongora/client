@@ -1,0 +1,21 @@
+<div [formGroup]="form"]>
+  <ion-item>
+    <ion-label>Titulo Reserva</ion-label>
+    <ion-input placeholder="Titulo" formControlName="title"></ion-input>
+  </ion-item>
+  <div *ngIf="form.controls['titulo'].errors" class="error">
+    <ion-text *ngIf="form.controls['titulo'].errors['required']" color="danger">*Campo Requerido</ion-text>
+    <ion-text *ngIf="form.controls['titulo'].errors['minlength']" color="danger">*Deben Ser Minimo 5 letras</ion-text>
+  </div>
+  <ion-item>
+    <ion-label position="stacked">Detalle</ion-label>
+    <ion-textarea placeholder="placeholder" formControlName="detalle" id="detalle"></ion-textarea>
+  </ion-item>
+  <div *ngIf="form.controls['detalle'].errors">
+    <ion-text *ngIf="form.controls['detalle'].errors['required']" color="danger">*Campo Requerido</ion-text>
+    <ion-text *ngIf="form.controls['detalle'].errors['minlength']" color="danger">*Deben Ser Minimo 5 letras</ion-text>
+  </div>
+  <section>
+    <ion-button expand="block"[disabled]="form.invalid" (click)="onSave()">Publicar</ion-button>
+  </section>
+</div>

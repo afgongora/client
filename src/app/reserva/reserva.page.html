@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>reserva</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="loading">
+    <ion-list-header>
+      <ion-label> Cargando Post </ion-label>
+    </ion-list-header>
+    <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+</ion-content>
+
+<ion-content *ngIf="!loading">
+  <ion-card>
+    <img [src]="reservatour.picture" />
+    <ion-card-header>
+    <div class="user">
+      <img [src]="'https://i.pravatar.cc/'" />
+      <h2>{{ reservatour.username }}</h2>
+      <h3>{{reservatour.name}}</h3>
+    </div>
+    </ion-card-header>
+    <ion-card-content>
+      {{reservatour.description}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

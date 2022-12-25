@@ -1,0 +1,19 @@
+{{email}}
+<ion-item>
+  <ion-label><ion-icon name="mail-outline"></ion-icon></ion-label>
+  <ion-input placeholder="Email" [value]="email"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label><ion-icon name="keypad-outline"></ion-icon></ion-label>
+  <ion-input placeholder="Password" type="password"></ion-input>
+</ion-item>
+<section>
+  <ion-button expand="block">Conectar</ion-button>
+  <a [routerLink]="['/admin']" routerLinkActive="router-link-active" >Ir</a>
+</section>
+<section>
+  <a [routerLink]="['/taquillero']" routerLinkActive="router-link-active" >taq</a>
+</section>
+<section>
+  <a [routerLink]="['/reservatour']" routerLinkActive="router-link-active" >rese</a>
+</section>
